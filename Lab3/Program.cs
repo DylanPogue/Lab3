@@ -27,6 +27,7 @@ public class Program
         Console.WriteLine("3. Remove a Person");
         Console.WriteLine("4. Create and View Random Last Name");
         Console.WriteLine("5. Create and View Random SSN");
+        Console.WriteLine("6. Create and View Random Phone Number");
         Console.WriteLine("0. Exit");
         Console.WriteLine("------------------");
     }
@@ -57,6 +58,10 @@ public class Program
             case 5:
                 Person rando = people[random.Next(people.Count())];
                 Console.WriteLine(rando.SSN);
+                break;
+            case 6:
+                Person ran = people[random.Next(people.Count())];
+                Console.WriteLine(ran.Phone);
                 break;
             case 0:
                 Console.WriteLine("See ya!");
