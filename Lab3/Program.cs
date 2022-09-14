@@ -23,8 +23,9 @@ public class Program
     {
         Console.WriteLine("------ Menu ------");
         Console.WriteLine("1. Create a new Person");
-        Console.WriteLine("2. View all people");
+        Console.WriteLine("2. View All People");
         Console.WriteLine("3. Remove a Person");
+        Console.WriteLine("4. Create and View Random Last Name");
         Console.WriteLine("5. Create and View Random SSN");
         Console.WriteLine("0. Exit");
         Console.WriteLine("------------------");
@@ -48,6 +49,10 @@ public class Program
                 Console.WriteLine("Type the number of the person you would like to remove");
                 int personToRemove = Int32.Parse(Console.ReadLine());
                 people.Remove(people[personToRemove]);
+                break;
+            case 4:
+                Person rand = people[random.Next(people.Count())];
+                Console.WriteLine(rand.LastName);
                 break;
             case 5:
                 Person rando = people[random.Next(people.Count())];
